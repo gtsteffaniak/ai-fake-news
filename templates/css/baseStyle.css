@@ -1,0 +1,29 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #FFFFFF;
+  line-height: 1.5;
+  font-family: Helvetica, Arial, sans-serif;
+  
+}
+
+.major {
+  font-weight:bold;
+  display: flex;
+  align-items: center;
+  font-size: 1.8em;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 100;
+  font-family: Helvetica;
+}
+a {
+  text-decoration: underline;
+}

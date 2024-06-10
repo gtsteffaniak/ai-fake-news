@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Grid Layout</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .grid-layout {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.5);
+      /* Semi-transparent background */
+      justify-content: center;
+      /* Center the items horizontally */
+    }
+
+    .grid-item {
+      border: 1px solid gray;
+      width: 500px;
+      height: 500px;
+      background-color: rgba(255, 255, 255, 0.8);
+      /* Semi-transparent background for grid items */
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    /* Additional CSS for the first grid item */
+    .grid-item:first-child {
+      width: 100%;
+      max-width: 1000px;
+      /* Twice as wide as others */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid-layout">
+    {{ range .articles }}
+    <div class="grid-item">
+      {{ template "components/card.html" .}}
+    </div>
+    {{ end }}
+  </div>
+</body>
+
+</html>

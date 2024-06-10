@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{ template "components/headerInfo.html" }}
+  <style>
+    .grid-container {
+      display:flex;
+      justify-content: center;
+    }
+    .grids {
+      width: 1200px;
+      border-style: solid;
+    }
+  </style>
+</head>
+
+<body>
+  {{ template "components/navbar.html" }}
+  <div class="grid-container">
+    <div class="grids">
+      {{ template "components/group-grid.html" . }}
+    </div>
+  </div>
+</body>
+
+
+</html>
